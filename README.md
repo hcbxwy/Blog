@@ -19,16 +19,27 @@
 ## 🛠 技术栈
 
 ### 后端（Java）
-- **核心框架**：JDK21 + Spring Boot 3.5.8
-- **数据库**：MySQL 8.0，PDMaas（数据库建模工具），Flyway（数据库版本控制）
-- **ORM**：MyBatis-Plus 3.5.14
-- **缓存**：Caffeine
-- **安全控制**：sa-token
+
+| 类别       | 技术选型                    | 说明                   |
+|----------|-------------------------|----------------------|
+| 核心框架     | Spring Boot 3.5.8       | 基于 JDK 21，轻量高效       |
+| 构建工具     | Maven                   | 多模块管理                |
+| 数据库      | MySQL 8.0               | 本地部署，已调优             |
+| ORM      | MyBatis-Plus 3.5.14     | 简化 CRUD，提升开发效率       |
+| 缓存       | Caffeine                | 本地缓存，零外部依赖，节省内存      |
+| 安全       | sa-token                | 无状态认证，适配 RESTful API |
+| Markdown | flexmark-java           | Java 原生 Markdown 解析  |
+| 部署       | Docker + docker-compose | 容器化部署，资源隔离           |
 
 ### 前端（Vue3）
-- **核心框架**：Vue3
-- **UI 组件库**：Element Plus
-- **构建工具**：Vite
+
+| 类别       | 技术选型                                      |
+|----------|-------------------------------------------|
+| 框架       | Vue 3（Composition API + `<script setup>`） |
+| UI 组件库   | Element Plus                              |
+| 构建工具     | Vite                                      |
+| 路由       | Vue Router 4                              |
+| HTTP 客户端 | Axios                                     |
 
 ### 运维 & 部署
 
@@ -49,14 +60,16 @@ blog/
 │   │   │   ├── common/               # 公共模块
 │   │   │   ├── config/               # 配置模块
 │   │   │   ├── controller/           # 控制层
+│   │   │   │   ├── admin/            # 管理后台接口
+│   │   │   │   ├── api/              # 前台API接口
+│   │   │   │   └── common/           # 公共接口
 │   │   │   ├── pojo/                 # POJO实体类
 │   │   │   ├── mapper/               # 数据访问层
-│   │   │   ├── entity/               # 模型类
 │   │   │   ├── service/              # 业务逻辑层
 │   │   │   │   └── impl/             # 业务逻辑实现
 │   │   └── resources/
 │   │       ├── application.yml       # 应用配置文件
-│   │       └── db.migration/         # 数据库迁移脚本
+│   │       └── migration/            # 数据库迁移脚本
 │   └── pom.xml                       # Maven 配置文件
 ├── frontend/                         # 前端项目目录
 ├── README.md                         # 项目说明文档
