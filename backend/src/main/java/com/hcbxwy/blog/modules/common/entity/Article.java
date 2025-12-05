@@ -1,11 +1,12 @@
-package com.hcbxwy.blog.entity;
+package com.hcbxwy.blog.modules.common.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.hcbxwy.blog.common.base.BaseEntity;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
 
 import java.time.LocalDateTime;
-import lombok.EqualsAndHashCode;
 
 /**
  * 文章表
@@ -16,6 +17,7 @@ import lombok.EqualsAndHashCode;
 @Data
 @TableName("t_article")
 @EqualsAndHashCode(callSuper = true)
+@Accessors(chain = true)
 public class Article extends BaseEntity {
 
     /**

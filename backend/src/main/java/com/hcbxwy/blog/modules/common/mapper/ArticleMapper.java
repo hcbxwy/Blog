@@ -1,7 +1,7 @@
-package com.hcbxwy.blog.mapper;
+package com.hcbxwy.blog.modules.common.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.hcbxwy.blog.entity.Article;
+import com.hcbxwy.blog.modules.common.entity.Article;
 
 /**
  * 文章表 Mapper 接口
